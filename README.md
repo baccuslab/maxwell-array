@@ -14,17 +14,14 @@ python3 -m venv ~/rgc-env
 ~/rgc-env/bin/pip install git+https://github.com/baccuslab/maxwell-array
 ```
 
-The second line takes a minute or two and prints a lot of text. It has worked if the
-last lines include `Successfully installed`.
-
-Check it:
+To check installation:
 
 ```
 ~/rgc-env/bin/rgc-build-dataset --help
 ```
 
 You should see text starting with `usage: rgc-build-dataset`. Installation is finished.
-You never need to repeat Part 1 on this computer (unless asked to update — see the end).
+You do not need to repeat Part 1 on this computer (unless asked to update — see the end).
 
 ## Part 2 — Make a dataset file (do this for every recording)
 

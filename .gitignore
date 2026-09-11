@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+*.dataset.h5
+*.raw.h5
+*.hdf5
+*.png
+.DS_Store

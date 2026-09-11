@@ -1,0 +1,9 @@
+{
+  "rig_name": "Baccus lab MaxOne rig (example - edit values)",
+  "stimulus_program": "visexpman (Linlab)",
+  "nominal_frame_rate_hz": 60,
+  "screen_um_per_pixel": null,
+  "screen_size_pixels": [null, null],
+  "light_intensity_calibration": null,
+  "notes": "Stimulus durations are executed as frame counts at nominal_frame_rate_hz; the real refresh rate is measured from the bits heartbeat. screen_um_per_pixel is visexpman's SCREEN_UM_TO_PIXEL_SCALE."
+}

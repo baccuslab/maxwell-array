@@ -1,0 +1,11 @@
+name: rgc
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - numpy
+  - h5py
+  - matplotlib
+  - pip
+  - pip:
+      - -e .

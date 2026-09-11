@@ -21,20 +21,30 @@ plugin is not required).
 
 ## Install (once)
 
-With conda (recommended):
+(Python 3.7 or newer with pip):
 
 ```
-conda env create -f environment.yml
-conda activate rgc
+pip install git+https://github.com/baccuslab/maxwell-array
 ```
 
-Or with plain Python (3.7 or newer):
+This downloads the package, installs numpy/h5py/matplotlib if they are missing, and
+puts the three commands on your path. To keep the tools separate from other Python
+software, you can first create and activate a virtual environment:
 
 ```
-pip install .
+python3 -m venv ~/rgc-env
+source ~/rgc-env/bin/activate        # Windows: rgc-env\Scripts\activate
+pip install git+https://github.com/baccuslab/maxwell-array
 ```
 
-Check: `rgc-build-dataset --help`
+(then `source ~/rgc-env/bin/activate` again in each new terminal before using the commands).
+
+
+The three commands `rgc-build-dataset`, `rgc-check-dataset`, `rgc-raster`
+are then available in the terminal. Check with `rgc-build-dataset --help`.
+
+To update to a newer version later: repeat the same `pip install` line (add `--upgrade`
+for Option A), or `git pull` then `pip install .` for Option B.
 
 ## Use
 

@@ -9,9 +9,10 @@ and stimulated with visexpman / Linlab:
 | `rgc-check-dataset` | checks that file: do the spikes belong to that recording, what did the stimulus marker line record, was any pulse dropped, does it match the protocol; `--write-blocks` stores the decoded, labelled stimulus timeline |
 | `rgc-raster` | raster + PSTH for one unit, aligned to the stimulus blocks |
 
-The dataset file is ~5 MB (the raw file is ~500 MB) and contains everything needed
-for analysis except the voltage traces. It does **not** need MaxWell's HDF5
-compression plugin, because the tools never read the traces.
+The dataset file contains
+1. Stimulus timing and other information from the raw recording .h5 file
+2. Sorted spikes from SpyKING Circus
+3. Detailed stimulus description
 
 ## Install (once)
 
@@ -80,7 +81,7 @@ are directly comparable.
 visexpman pulses the marker line at every `block_start` / `block_end` call in the
 protocol's `run()`:
 
-* **Fullfield**: pulse at light ON and at light OFF (the `on` block); the 2.5 s
+* **Fullfield**: pulse at light ON and at light OFF (the `on` block); the ~2.5 s
   background and the 0.5 s WAIT at start and end are unmarked. 25 blocks → 50 pulses.
 * **MovingGrating**: pulse at sweep onset and sweep end (the `('sweep', d)` block);
   the 1 s static grating shown before each sweep is unmarked, so the interval

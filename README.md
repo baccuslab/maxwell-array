@@ -43,8 +43,8 @@ pip install git+https://github.com/baccuslab/maxwell-array
 The three commands `rgc-build-dataset`, `rgc-check-dataset`, `rgc-raster`
 are then available in the terminal. Check with `rgc-build-dataset --help`.
 
-To update to a newer version later: repeat the same `pip install` line (add `--upgrade`
-for Option A), or `git pull` then `pip install .` for Option B.
+To update to a newer version later: use `pip install` --upgrade
+
 
 ## Use
 
